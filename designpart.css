@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+                        /* :root always goes first */
+:root {
+    --orange:       #E87722;
+    --orange-dark:  #CF6510;
+    --orange-light: #FEF3E2;
+    --teal:         #4E7F7F;
+    --teal-dark:    #3A6060;
+    --green:        #7CB98A;
+    --gold:         #F0C07A;
+    --spice-red:    #C03C1A;
+
+    --bg-main:      #FFFDF9;
+    --bg-cream:     #F8F6F0;
+    --bg-mango:     #FEF3E2;
+    --bg-mint:      #E8F5EE;
+
+    --text-heading: #1A1A1A;
+    --text-body:    #4A4A4A;
+    --text-muted:   #888880;
+
+    --border:       #E8E4DA;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-body);
+    /* pushes content below the fixed navbar */
+}
+
+                        /* ============================================== NAVBAR   ============================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.7); /* White with 70% opacity */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+    transition: background-color 0.3s ease;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1em 2em;
+    text-decoration: none;
+    outline: none;
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: var(--teal);       /* #4E7F7F */
+    color: #FFFFFF;
+    border: 2px solid var(--teal);
+    border-radius: 30px;
+    letter-spacing: 0.1em;
+    transition: background-color 0.3s ease,
+                transform 0.2s ease,
+                box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--teal-dark);  /* #3A6060 */
+    border-color: var(--teal-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(78, 127, 127, 0.35);
+}
+
+
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Hide hamburger on desktop */
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+    display: none;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+.logo-image {
+    height: 60px;
+    width: auto;
+    display: block;  /* block, not flex — it's an image not a container */
+    mix-blend-mode: multiply;
+    /* order removed — put on .logo if needed, not .logo-image */
+}
+
+.menu-items {
+    display: flex;
+    align-items: center;
+
+    list-style: none;
+    gap: 2rem;
+}
+
+.menu-items li {
+    margin-left: 0;  /* gap on parent handles spacing */
+}
+
+.menu-items a {
+    text-decoration: none;
+    color: var(--text-heading);
+    font-size: 1.8rem;   /* 15px — 1.8rem was slightly large */
+    font-weight: 500;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Animated underline on hover */
+.menu-items a::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--orange);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.menu-items a:hover {
+    color: var(--orange);
+}
+
+.menu-items a:hover::after {
+    width: 70%;
+}
+
+/* Contact button stands out */
+.menu-items a.nav-cta {
+    background-color: var(--orange);
+    color: #fff;
+    border-radius: 25px;
+    padding: 0.7rem 2rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.menu-items a.nav-cta:hover {
+    background-color: var(--orange-dark);
+    transform: translateY(-1px);
+    color: #fff;
+}
+
+.menu-items a.nav-cta::after {
+    display: none; /* no underline on the button */
+}
+
+                    /* ############## SHOWCASE STYLING ########## */
+.showcase-area {
+    background: linear-gradient(rgba(240,240,240,0.144),rgba(255,255,255,0.8)),url("ella-olsson-oPBjWBCcAEo-unsplash.jpg");
+    width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+.showcase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+    height : 100%;
+    font-size : 1.5rem;
+    color : var(--text-body);
+}
+
