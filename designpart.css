@@ -198,3 +198,57 @@ body {
     color : var(--text-body);
 }
 
+/* #################### About-area Styling #############  */
+.about-area {
+    padding: 6rem 0;
+    background: #f5f5f7;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+/* Left text column */
+.about-content {
+    flex: 1 1 400px;
+}
+
+.about-label {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.about-content h2 {
+    font-size: 3.2rem;
+    color: var(--text-heading);
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+}
+
+.about-content p {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+/* Right image column */
+.about-image {
+    flex: 1 1 400px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
