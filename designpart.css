@@ -207,13 +207,26 @@ body {
 .about-container {
     display: flex;
     align-items: center;
-    gap: 4rem;
+    gap: 5rem;
     flex-wrap: wrap;
 }
 
 /* Left text column */
 .about-content {
     flex: 1 1 400px;
+    transform : translate(-150%);
+    animation-name : Toleft;
+    animation-duration: 1s;
+    animation-delay : 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes Toleft {
+    100% {
+        transform : translate(0);
+    }
 }
 
 .about-label {
@@ -243,7 +256,22 @@ body {
 /* Right image column */
 .about-image {
     flex: 1 1 400px;
+    transform : translate(150%);
+    animation-name : Toright;
+    animation-duration: 1s;
+    animation-delay : 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
+
+
+    @keyframes Toright {
+        100% {
+            transform : translate(0);
+        }
+    }
+
 
 .about-image img {
     width: 100%;
@@ -252,3 +280,7 @@ body {
     border-radius: 12px;
     display: block;
 }
+
+
+
+/* #################### Typesoffood-area Styling #############  */
