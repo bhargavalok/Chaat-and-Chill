@@ -468,5 +468,14 @@
     });
     </script>
 
+    <script>
+    document.querySelectorAll('.menu-items a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('nav-toggle').checked = false;
+        });
+    });
+</script>
+
+
 </body>
 </html>
