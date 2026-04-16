@@ -18,7 +18,7 @@ Chaat & Chill is a fully responsive restaurant landing page that covers everythi
   
 ## Concepts Used
 **HTML**
-- Semantic sectioning elements (<section>, <nav>, <footer>)
+- Semantic sectioning elements (section,nav,footer)
 - Anchor-based single-page navigation
 - Form structure with labels, inputs, select, and textarea
 - External font and icon library integration via CDN
